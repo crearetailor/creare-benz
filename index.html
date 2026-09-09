@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0b0b0b" />
+  <title>CREARE TAILOR SHOP · Special Invitation</title>
+  <meta name="description" content="CREARE TAILOR SHOP Special Invitation · British Fabric Suit · September Benefit" />
+  <style>
+    :root{
+      --bg:#0a0a0a;
+      --panel:#111;
+      --ivory:#f3efe7;
+      --muted:#bfb8ad;
+      --line:#625e58;
+      --brown:#9c7b68;
+      --naver:#03c75a;
+      --max:720px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:
+        radial-gradient(circle at 20% 10%, rgba(255,255,255,.035), transparent 28%),
+        linear-gradient(180deg,#101010 0%,#080808 100%);
+      color:var(--ivory);
+      font-family:"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",Arial,sans-serif;
+      word-break:keep-all;
+    }
+    .page{width:min(100%,var(--max));margin:0 auto;background:#0b0b0b;overflow:hidden}
+    .hero{
+      padding:34px 20px 18px;
+      background:
+        linear-gradient(rgba(7,7,7,.78),rgba(7,7,7,.78)),
+        radial-gradient(circle at 20% 0%,#2a2927,#0b0b0b 55%);
+      text-align:center;
+    }
+    .brandline{
+      display:flex;align-items:center;justify-content:center;gap:18px;margin-bottom:18px
+    }
+    .brand{font-family:Georgia,"Times New Roman",serif;letter-spacing:.38em;font-size:25px;margin-left:.38em}
+    .tagline{
+      padding-left:18px;border-left:1px solid #b9b0a4;
+      font-family:Georgia,"Times New Roman",serif;font-size:9px;letter-spacing:.24em;line-height:1.75;color:#ddd5ca;text-align:left
+    }
+    .invite{font-family:Georgia,"Times New Roman",serif;letter-spacing:.42em;font-size:11px;margin-left:.42em;color:#ddd6cc}
+    .brochure-wrap{padding:0 20px 22px;background:#0b0b0b}
+    .brochure{
+      display:block;width:100%;height:auto;border:0;box-shadow:0 14px 34px rgba(0,0,0,.36)
+    }
+    .section{padding:48px 28px}
+    .center{text-align:center}
+    .eyebrow{font-family:Georgia,"Times New Roman",serif;letter-spacing:.26em;font-size:12px;color:#d7d0c6}
+    .shortline{width:34px;height:1px;background:#ddd3c8;margin:14px auto 22px}
+    h2{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:28px;margin:0 0 12px}
+    .lead{margin:0;color:#c8c1b8;font-size:14px;line-height:1.9}
+    .features{
+      margin-top:34px;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #3c3936;border-bottom:1px solid #3c3936
+    }
+    .feature{padding:22px 7px;text-align:center;border-right:1px solid #3c3936}
+    .feature:last-child{border-right:0}
+    .icon{font-size:24px;line-height:1;margin-bottom:11px}
+    .feature strong{display:block;font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:10px;letter-spacing:.08em;line-height:1.4}
+    .feature span{display:block;color:#bdb5aa;font-size:10px;margin-top:8px;line-height:1.45}
+    .promo{background:linear-gradient(180deg,#111,#0b0b0b)}
+    .card{
+      margin-top:28px;background:#f1ede5;color:#201e1b;padding:12px 22px 10px
+    }
+    .row{display:grid;grid-template-columns:64px 1fr;gap:14px;padding:20px 0;border-bottom:1px solid #cfc8be}
+    .row:last-child{border-bottom:0}
+    .num{font-family:Georgia,"Times New Roman",serif;font-style:italic;font-size:43px;color:#6d5545;line-height:1}
+    .row h3{margin:2px 0 7px;font-weight:600;font-size:17px}
+    .row p{margin:0;color:#5b554e;font-size:13px;line-height:1.65}
+    .reserve{padding-top:46px}
+    .buttons{display:grid;gap:12px;margin-top:24px}
+    .btn{
+      min-height:66px;border-radius:8px;display:grid;grid-template-columns:54px 1fr 28px;align-items:center;
+      padding:0 18px;text-decoration:none;color:white;border:1px solid #4c4945;background:#141414;
+      font-size:17px;transition:.15s transform ease,.15s opacity ease
+    }
+    .btn:active{transform:scale(.99);opacity:.9}
+    .btn.naver{background:var(--naver);border-color:var(--naver)}
+    .btn.phone{background:linear-gradient(90deg,#8f6f5f,#a78471);border-color:#a98775}
+    .btn .mark{font-weight:800;font-size:28px;text-align:left}
+    .btn .arrow{text-align:right;font-size:24px;font-weight:300}
+    .closing{padding-top:50px}
+    .closing .quote{font-family:Georgia,"Times New Roman",serif;font-size:25px}
+    .footer{
+      border-top:1px solid #2f2d2b;padding:34px 24px 42px;display:flex;align-items:center;justify-content:center;gap:24px
+    }
+    .footer-brand{font-family:Georgia,"Times New Roman",serif;letter-spacing:.33em;font-size:21px;margin-left:.33em}
+    .footer-sub{font-family:Georgia,"Times New Roman",serif;letter-spacing:.23em;font-size:9px;color:#cfc6bb;text-align:center;margin-top:7px}
+    .footer-copy{border-left:1px solid #8d857c;padding-left:24px;color:#cfc8be;font-size:11px;line-height:1.7}
+    @media(max-width:480px){
+      .hero{padding-top:28px}
+      .brand{font-size:22px;letter-spacing:.3em;margin-left:.3em}
+      .tagline{font-size:8px}
+      .section{padding:42px 22px}
+      .features{grid-template-columns:repeat(2,1fr)}
+      .feature:nth-child(2){border-right:0}
+      .feature:nth-child(-n+2){border-bottom:1px solid #3c3936}
+      .row{grid-template-columns:54px 1fr}
+      .num{font-size:39px}
+      .footer{gap:16px}
+      .footer-brand{font-size:18px}
+      .footer-copy{padding-left:16px}
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div class="brandline">
+        <div>
+          <div class="brand">CREARE</div>
+          <div style="font-family:Georgia,'Times New Roman',serif;letter-spacing:.28em;font-size:10px;margin-top:8px;">TAILOR SHOP</div>
+        </div>
+        <div class="tagline">GOOD<br>PEOPLE<br>GOOD<br>CLOTHES<br>A BRIGHTER<br>TOMORROW</div>
+      </div>
+      <div class="invite">SPECIAL INVITATION</div>
+    </section>
+
+    <div class="brochure-wrap">
+      <img class="brochure" src="brochure.jpg" alt="CREARE British Fabric Suit Special Invitation">
+    </div>
+
+    <section class="section center">
+      <h2>특별한 분을 위한 초대입니다.</h2>
+      <div class="shortline"></div>
+      <p class="lead">크레아레 테일러샵의 9월 프로모션을<br>지금 만나보세요.</p>
+
+      <div class="features">
+        <div class="feature"><div class="icon">◇</div><strong>PREMIUM<br>FABRICS</strong><span>영국 프리미엄 원단</span></div>
+        <div class="feature"><div class="icon">✂</div><strong>TAILORING</strong><span>1:1 테일러링 상담</span></div>
+        <div class="feature"><div class="icon">♙</div><strong>SHIRT</strong><span>이니셜 자수 증정</span></div>
+        <div class="feature"><div class="icon">♔</div><strong>EXCLUSIVE<br>EXPERIENCE</strong><span>프라이빗한 피팅</span></div>
+      </div>
+    </section>
+
+    <section class="section promo center">
+      <div class="eyebrow">프로모션 안내</div>
+      <div class="shortline"></div>
+      <p class="lead">크레아레 테일러샵의 9월 특별 혜택을 만나보세요.</p>
+
+      <div class="card" style="text-align:left">
+        <div class="row">
+          <div class="num">01</div>
+          <div><h3>영국 프리미엄 원단 수트</h3><p>시간이 지나도 변하지 않는 가치를 경험하세요.</p></div>
+        </div>
+        <div class="row">
+          <div class="num">02</div>
+          <div><h3>이니셜 자수 셔츠 1장 증정</h3><p>당신만을 위한 특별한 셔츠를 선물합니다.</p></div>
+        </div>
+        <div class="row">
+          <div class="num">03</div>
+          <div><h3>1:1 맞춤 상담</h3><p>체형과 스타일에 맞춘 전문 테일러링 컨설팅을 받아보세요.</p></div>
+        </div>
+        <div class="row">
+          <div class="num">04</div>
+          <div><h3>프라이빗한 피팅 경험</h3><p>편안하고 여유로운 공간에서 특별한 시간을 제공합니다.</p></div>
+        </div>
+      </div>
+
+      <div class="reserve">
+        <h2>간편한 예약</h2>
+        <div class="shortline"></div>
+        <p class="lead">지금, 더 특별한 경험을 예약해보세요.</p>
+
+        <div class="buttons">
+          <a class="btn naver" href="https://m.booking.naver.com/booking/6/bizes/1719973/items/7976123?area=pll&amp;lang=ko&amp;theme=place" target="_blank" rel="noopener">
+            <span class="mark">N</span><span>네이버 예약하기</span><span class="arrow">›</span>
+          </a>
+          <a class="btn" href="https://pf.kakao.com/_xfxgyJX/friend" target="_blank" rel="noopener">
+            <span class="mark">●</span><span>카카오톡 상담하기</span><span class="arrow">›</span>
+          </a>
+          <a class="btn phone" href="tel:01046348175">
+            <span class="mark">☎</span><span>전화 상담하기</span><span class="arrow">›</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="closing">
+        <div class="quote">크레아레 테일러샵</div>
+        <div class="shortline"></div>
+        <p class="lead">좋은 원단, 좋은 기술,<br>더 나은 내일을 만듭니다.</p>
+
+      </div>
+    </section>
+
+    <!-- 원단 라벨 사진 영역은 요청대로 제거했습니다. -->
+
+    <footer class="footer">
+      <div>
+        <div class="footer-brand">CREARE</div>
+        <div class="footer-sub">TAILOR SHOP</div>
+      </div>
+      <div class="footer-copy">좋은 옷이<br>좋은 하루를 만듭니다.</div>
+    </footer>
+  </main>
+</body>
+</html>
