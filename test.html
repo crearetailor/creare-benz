@@ -389,24 +389,30 @@
       btn.textContent = '신청 내용을 저장하고 있습니다...';
       msg.textContent = '';
 
-      google.script.run
-        .withSuccessHandler(function(result) {
-          msg.style.color = '#247044';
-          msg.textContent = result.message;
-          btn.textContent = '신청 완료';
-          form.querySelectorAll('input, textarea, button')
-            .forEach(function(el) {
-              el.disabled = true;
-            });
-        })
-        .withFailureHandler(function(error) {
-          msg.style.color = '#b3261e';
-          msg.textContent =
-            '신청 실패: ' + error.message;
-          btn.disabled = false;
-          btn.textContent = '다시 신청하기';
-        })
-        .submitOrder(data);
+            const scriptUrl =
+        'https://script.google.com/macros/s/AKfycbwgX1Z-0EgP4X8aDFSthaaEDa_2XZJpJ4tFVdUYb5Ct0X_xqhaZe1v4is5iIlNHsZzu/exec';
+
+      fetch(scriptUrl, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'text/plain;charset=utf-8'
+        },
+        body: JSON.stringify(data)
+      })
+      .then(function() {
+        msg.style.color = '#666';
+        msg.textContent =
+          '신청 내용을 전송했습니다. 실제 접수 여부는 확인 중입니다.';
+        btn.textContent = '전송 완료';
+        // no-cors에서는 서버의 저장 성공 여부를 확인할 수 없습니다.
+      })
+      .catch(function(error) {
+        msg.style.color = '#b3261e';
+        msg.textContent = '전송 오류가 발생했습니다. 다시 시도해 주세요.';
+        btn.disabled = false;
+        btn.textContent = '다시 신청하기';
+      });
     });
 </script>
 </body>
